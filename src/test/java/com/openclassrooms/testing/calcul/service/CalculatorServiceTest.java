@@ -3,6 +3,7 @@ package com.openclassrooms.testing.calcul.service;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -52,9 +53,13 @@ public class CalculatorServiceTest {
 
 	@Mock
 	Calculator calculator;
+	// ou 
+	// Calculator calculator = mock(Calculator.class);
 
 	@Mock	
 	SolutionFormatter solutionFormatter;
+	// ou 
+	// SolutionFormatter solutionFormatter = mock(SolutionFormatter.class);
 
 	CalculatorService classUnderTest;
 	@BeforeEach
